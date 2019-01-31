@@ -2,9 +2,9 @@ EESchema Schematic File Version 4
 LIBS:riscv-phone-cache
 EELAYER 26 0
 EELAYER END
-$Descr A3 16535 11693
+$Descr A4 11693 8268
 encoding utf-8
-Sheet 7 8
+Sheet 3 3
 Title ""
 Date ""
 Rev ""
@@ -855,12 +855,8 @@ Text HLabel 6400 3550 2    50   Output ~ 0
 LCD_CS
 Text HLabel 6400 3650 2    50   Output ~ 0
 MOSI
-Text HLabel 6400 3750 2    50   Input ~ 0
-MISO
 Text HLabel 6400 3850 2    50   Output ~ 0
 SCK
-Text HLabel 6400 4050 2    50   Output ~ 0
-SD_CS
 Text HLabel 6400 4250 2    50   Input ~ 0
 KEYPAD_INT
 Text HLabel 10550 3500 2    50   Input ~ 0
@@ -1192,8 +1188,6 @@ Wire Notes Line
 Wire Wire Line
 	5700 7350 5700 7400
 Wire Wire Line
-	5700 6400 6050 6400
-Wire Wire Line
 	4700 6400 5700 6400
 Wire Wire Line
 	4700 6400 4700 7000
@@ -1348,8 +1342,6 @@ Wire Wire Line
 Wire Wire Line
 	7650 3150 8650 3150
 Wire Wire Line
-	1150 7000 1600 7000
-Wire Wire Line
 	1300 6450 1300 6750
 Wire Wire Line
 	1600 6950 1600 7000
@@ -1428,23 +1420,6 @@ NoConn ~ 1450 5200
 NoConn ~ 1900 6750
 NoConn ~ -6450 -750
 $Comp
-L riscv-phone:SC18IS600 U?
-U 1 1 5C4F74D5
-P 9550 2200
-AR Path="/5C50F5D1/5C4F74D5" Ref="U?"  Part="1" 
-AR Path="/5C1083B4/5C4F74D5" Ref="U12"  Part="1" 
-F 0 "U12" H 9550 3225 50  0000 C CNN
-F 1 "SC18IS600" H 9550 3134 50  0000 C CNN
-F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 9600 2200 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74CBTLV3257.pdf" H 9600 2200 50  0001 C CNN
-F 4 "SC18IS600IPW/S8HP " H 9550 3325 50  0001 C CNN "Manufacturer Part Number"
-F 5 "NXP USA Inc." H 9550 3325 50  0001 C CNN "Manufacturer"
-F 6 "568-13690-1-ND" H 9550 3325 50  0001 C CNN "Vendor Part Number"
-F 7 "DigiKey" H 9550 3325 50  0001 C CNN "Vendor"
-	1    9550 2200
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5C4F74DC
 P 8900 2150
@@ -1509,7 +1484,7 @@ F 7 "DigiKey" H 8020 1846 50  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 Text Label 8750 2000 2    50   ~ 0
-RESET_N
+RESET
 Text Label 8750 1400 2    50   ~ 0
 VDD_3V3
 Text HLabel 10650 1400 2    50   BiDi ~ 0
@@ -1534,8 +1509,6 @@ Wire Wire Line
 	8900 1500 8750 1500
 Wire Wire Line
 	8900 1400 8750 1400
-Wire Wire Line
-	8750 2000 8900 2000
 Wire Wire Line
 	10200 2000 10350 2000
 Wire Wire Line
@@ -1593,4 +1566,153 @@ Text Label 8750 1700 2    50   ~ 0
 SCK
 Text Label 8750 1600 2    50   ~ 0
 MISO
+$Comp
+L power:VCC #PWR0106
+U 1 1 5C54FF53
+P 650 7000
+F 0 "#PWR0106" H 650 6850 50  0001 C CNN
+F 1 "VCC" H 667 7173 50  0000 C CNN
+F 2 "" H 650 7000 50  0001 C CNN
+F 3 "" H 650 7000 50  0001 C CNN
+	1    650  7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 7000 1600 7000
+Wire Wire Line
+	650  7000 800  7000
+Connection ~ 800  7000
+$Comp
+L power:GND #PWR?
+U 1 1 5C577193
+P 8450 6100
+AR Path="/5C50F5D1/5C577193" Ref="#PWR?"  Part="1" 
+AR Path="/5C1083B4/5C577193" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 8450 5850 50  0001 C CNN
+F 1 "GND" H 8455 5927 50  0000 C CNN
+F 2 "" H 8450 6100 50  0001 C CNN
+F 3 "" H 8450 6100 50  0001 C CNN
+	1    8450 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Memory_EEPROM:M95256-WMN6P U?
+U 1 1 5C57719D
+P 8450 5750
+AR Path="/5C50F5D1/5C57719D" Ref="U?"  Part="1" 
+AR Path="/5C1083B4/5C57719D" Ref="U18"  Part="1" 
+F 0 "U18" H 8450 6300 50  0000 C CNN
+F 1 "M95256-WMN6P" H 8450 6200 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8450 5750 50  0001 C CNN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/9d/75/f0/3e/76/00/4c/0b/CD00103810.pdf/files/CD00103810.pdf/jcr:content/translations/en.CD00103810.pdf" H 8450 5750 50  0001 C CNN
+	1    8450 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 5850 8050 5850
+Wire Wire Line
+	9000 5750 8850 5750
+Wire Wire Line
+	8850 5850 9000 5850
+Wire Wire Line
+	8450 6100 8450 6050
+Text Label 8050 5400 2    50   ~ 0
+VDD_3V3
+Wire Wire Line
+	8050 5750 8050 5650
+Connection ~ 8050 5650
+Wire Wire Line
+	8050 5400 8050 5450
+Wire Wire Line
+	8450 5450 8050 5450
+Connection ~ 8050 5450
+Wire Wire Line
+	8050 5450 8050 5650
+Wire Wire Line
+	8850 5650 9000 5650
+Text Label 9000 5850 0    50   ~ 0
+MISO
+Text Label 9000 5750 0    50   ~ 0
+MOSI
+Text Label 9000 5650 0    50   ~ 0
+SCK
+Text Label 7950 5850 2    50   ~ 0
+EEPROM_CS
+Text Label 6400 4050 0    50   ~ 0
+EEPROM_CS
+Wire Wire Line
+	7400 5450 8050 5450
+Wire Wire Line
+	7400 6050 8450 6050
+Connection ~ 8450 6050
+Wire Notes Line
+	9250 5100 9250 6400
+Wire Notes Line
+	9250 6400 7150 6400
+Wire Notes Line
+	7150 6400 7150 5100
+Wire Notes Line
+	7150 5100 9250 5100
+Text Notes 7200 5200 0    50   ~ 0
+EEPROM
+Wire Wire Line
+	5700 6400 6400 6400
+Wire Wire Line
+	6400 6700 6400 6800
+Connection ~ 6400 6800
+$Comp
+L Device:C C59
+U 1 1 5C548073
+P 7400 5650
+F 0 "C59" H 7515 5696 50  0000 L CNN
+F 1 "0.1uF" H 7515 5605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7438 5500 50  0001 C CNN
+F 3 "~" H 7400 5650 50  0001 C CNN
+F 4 "CL10B104KO8NNNC " H 7515 5796 50  0001 C CNN "Manufacturer Part Number"
+F 5 "Samsung Electro-Mechanics" H 7515 5796 50  0001 C CNN "Manufacturer"
+F 6 "1276-1005-1-ND " H 7515 5796 50  0001 C CNN "Vendor Part Number"
+F 7 "DigiKey" H 7515 5796 50  0001 C CNN "Vendor"
+	1    7400 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R53
+U 1 1 5C548482
+P 6400 6550
+F 0 "R53" H 6470 6596 50  0000 L CNN
+F 1 "100k" H 6470 6505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6330 6550 50  0001 C CNN
+F 3 "~" H 6400 6550 50  0001 C CNN
+F 4 "RR0816P-104-D " H 6470 6696 50  0001 C CNN "Manufacturer Part Number"
+F 5 "Susumu" H 6470 6696 50  0001 C CNN "Manufacturer"
+F 6 "RR08P100KDCT-ND " H 6470 6696 50  0001 C CNN "Vendor Part Number"
+F 7 "DigiKey" H 6470 6696 50  0001 C CNN "Vendor"
+	1    6400 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 5500 7400 5450
+Wire Wire Line
+	7400 5800 7400 6050
+Text HLabel 6400 3750 2    50   Output ~ 0
+MISO
+$Comp
+L riscv-phone:SC18IS600 U?
+U 1 1 5C4F74D5
+P 9550 2200
+AR Path="/5C50F5D1/5C4F74D5" Ref="U?"  Part="1" 
+AR Path="/5C1083B4/5C4F74D5" Ref="U12"  Part="1" 
+F 0 "U12" H 9550 3225 50  0000 C CNN
+F 1 "SC18IS600" H 9550 3134 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 9600 2200 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74CBTLV3257.pdf" H 9600 2200 50  0001 C CNN
+F 4 "SC18IS600IPW/S8HP " H 9550 3325 50  0001 C CNN "Manufacturer Part Number"
+F 5 "NXP USA Inc." H 9550 3325 50  0001 C CNN "Manufacturer"
+F 6 "568-13690-1-ND" H 9550 3325 50  0001 C CNN "Vendor Part Number"
+F 7 "DigiKey" H 9550 3325 50  0001 C CNN "Vendor"
+	1    9550 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 2000 8750 2000
 $EndSCHEMATC
