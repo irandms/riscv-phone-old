@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:riscv-phone-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 8
+Sheet 2 2
 Title ""
 Date ""
 Rev ""
@@ -478,32 +477,6 @@ F 7 "DigiKey" H 4280 2004 50  0001 C CNN "Vendor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR0157
-U 1 1 5C18532A
-P 2050 7150
-F 0 "#PWR0157" H 2050 6900 50  0001 C CNN
-F 1 "GND" H 2055 6977 50  0000 C CNN
-F 2 "" H 2050 7150 50  0001 C CNN
-F 3 "" H 2050 7150 50  0001 C CNN
-	1    2050 7150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R33
-U 1 1 5C207766
-P 1300 6700
-F 0 "R33" H 1370 6746 50  0000 L CNN
-F 1 "10k" H 1370 6655 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 1230 6700 50  0001 C CNN
-F 3 "~" H 1300 6700 50  0001 C CNN
-F 4 "RNCP0603FTD10K0 " H 1370 6846 50  0001 C CNN "Manufacturer Part Number"
-F 5 "Stackpole Electronics Inc" H 1370 6846 50  0001 C CNN "Manufacturer"
-F 6 "RNCP0603FTD10K0CT-ND " H 1370 6846 50  0001 C CNN "Vendor Part Number"
-F 7 "DigiKey" H 1370 6846 50  0001 C CNN "Vendor"
-	1    1300 6700
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:C C38
 U 1 1 5C15FB87
 P 9450 1000
@@ -517,36 +490,6 @@ F 6 "1276-1036-1-ND " H 9565 1146 50  0001 C CNN "Vendor Part Number"
 F 7 "DigiKey" H 9565 1146 50  0001 C CNN "Vendor"
 	1    9450 1000
 	1    0    0    -1  
-$EndComp
-$Comp
-L riscv-phone:NOA1305 U10
-U 1 1 5C360FD8
-P 2050 7050
-F 0 "U10" H 2441 7346 50  0000 L CNN
-F 1 "NOA1305" H 2441 7255 50  0000 L CNN
-F 2 "Package_DFN_QFN:DFN-6-1EP_2x2mm_P0.65mm_EP1x1.6mm" H 2050 7050 50  0001 C CNN
-F 3 "" H 2050 7050 50  0001 C CNN
-F 4 "NOA1305CUTAG" H 2441 7446 50  0001 C CNN "Manufacturer Part Number"
-F 5 "ON Semiconductor" H 2441 7446 50  0001 C CNN "Manufacturer"
-F 6 "863-NOA1305CUTAG" H 2441 7446 50  0001 C CNN "Vendor Part Number"
-F 7 "Mouser" H 2441 7446 50  0001 C CNN "Vendor"
-	1    2050 7050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C37
-U 1 1 5C1EA3BE
-P 2950 6800
-F 0 "C37" V 2698 6800 50  0000 C CNN
-F 1 "10uF" V 2789 6800 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 2988 6650 50  0001 C CNN
-F 3 "~" H 2950 6800 50  0001 C CNN
-F 4 "CL10A106MQ8NNNC " H 2698 6900 50  0001 C CNN "Manufacturer Part Number"
-F 5 "Samsung Electro-Mechanics" H 2698 6900 50  0001 C CNN "Manufacturer"
-F 6 "1276-1119-1-ND " H 2698 6900 50  0001 C CNN "Vendor Part Number"
-F 7 "DigiKey" H 2698 6900 50  0001 C CNN "Vendor"
-	1    2950 6800
-	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R52
@@ -629,20 +572,10 @@ Text Notes 2600 1250 0    50   ~ 0
 Tie unused to VCC
 Text Notes 7900 2150 0    50   ~ 0
 TODO: Consider FET to save power?
-Text Label 1650 6800 2    50   ~ 0
-SCL
-Text Label 1650 6700 2    50   ~ 0
-SDA
 Text HLabel 2850 1500 2    50   Input ~ 0
 BATT_ALRT
-Text Label 1050 6900 2    50   ~ 0
-LIGHT_INT
-Text Label 2900 1600 0    50   ~ 0
-LIGHT_INT
 Text Notes 900  7600 0    50   ~ 0
 Nonessential light sensor.\nTo be used after core functionality is complete
-Text HLabel 1200 6500 0    50   Input ~ 0
-VDD_3V3_MOFF
 Text Label 1250 2200 2    50   ~ 0
 VDD_3V3
 Wire Wire Line
@@ -932,15 +865,9 @@ Wire Wire Line
 Wire Wire Line
 	4350 2100 2800 2100
 Wire Wire Line
-	1650 6800 1700 6800
-Wire Wire Line
-	1700 6700 1650 6700
-Wire Wire Line
 	2300 1250 3550 1250
 Wire Wire Line
 	2800 1600 2900 1600
-Wire Wire Line
-	1300 6900 1300 6850
 Wire Wire Line
 	9450 850  8750 850 
 Wire Wire Line
@@ -953,30 +880,6 @@ Wire Wire Line
 	9300 1150 9450 1150
 Wire Wire Line
 	8700 1050 9300 1050
-Wire Wire Line
-	2050 7150 2050 7100
-Wire Wire Line
-	2050 7150 2150 7150
-Wire Wire Line
-	2150 7150 2150 7100
-Wire Wire Line
-	1050 6900 1300 6900
-Wire Wire Line
-	1300 6900 1700 6900
-Wire Wire Line
-	1300 6500 2050 6500
-Wire Wire Line
-	1300 6500 1300 6550
-Wire Wire Line
-	2950 6500 2950 6650
-Wire Wire Line
-	2050 6500 2950 6500
-Wire Wire Line
-	2150 7150 2950 7150
-Wire Wire Line
-	2950 7150 2950 6950
-Wire Wire Line
-	1200 6500 1300 6500
 Wire Wire Line
 	1250 2200 1250 2250
 Wire Wire Line
@@ -1057,11 +960,6 @@ Connection ~ 3750 1250
 Connection ~ 3950 1250
 Connection ~ 4150 1250
 Connection ~ 8750 950 
-Connection ~ 2050 7150
-Connection ~ 1300 6900
-Connection ~ 2050 6500
-Connection ~ 2150 7150
-Connection ~ 1300 6500
 Connection ~ 1250 2600
 Text HLabel 1750 2800 0    50   Input ~ 0
 SCL
@@ -1078,4 +976,5 @@ Text HLabel 8800 1450 2    50   Input ~ 0
 MOSI
 Text HLabel 8800 1550 2    50   Input ~ 0
 SCK
+NoConn ~ 2900 1600
 $EndSCHEMATC
