@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 419)
+    (start_pass_no 2025)
     (layer_rule F.Cu
       (active on)
       (preferred_direction vertical)
@@ -66,18 +66,18 @@
     "Net-(AE1-Pad1)" +3V3 "Net-(BZ1-Pad2)" GND "Net-(C4-Pad1)" /AudioINDIV/MIC+ "/AudioINDIV/MIC-" "Net-(C11-Pad2)"
     "Net-(C14-Pad1)" "Net-(C15-Pad2)" "Net-(C15-Pad1)" "/AudioINDIV/HEADPHONE_DETECT" /ModemINDIV/DSR /ModemINDIV/RI /ModemINDIV/DCD /ModemINDIV/CTS
     /ModemINDIV/RTS /ModemINDIV/DTR "/ModemINDIV/MODEM_TX" "/ModemINDIV/MODEM_RX" /ModemINDIV/GPIO1 /ModemINDIV/GPIO2 /ModemINDIV/GPIO3 /ModemINDIV/GPIO4
-    /ModemINDIV/GPIO5 /ModemINDIV/GPIO6 "/ModemINDIV/RESET_N_1V8" "/ModemINDIV/VDD_3V3_MOFF" /ModemINDIV/VBAT /AudioINDIV/SCLK /AudioINDIV/SDIO /AudioINDIV/BUZZER
-    /AudioINDIV/SPK+ "/AudioINDIV/SPK-" "Net-(J10-Pad1)" "Net-(J10-Pad6)" "Net-(J10-Pad2)" "Net-(J10-Pad3)" "Net-(J10-Pad7)" "Net-(KS1-Pad3)"
-    "Net-(KS2-Pad2)" "Net-(KS2-Pad1)" "Net-(Q1-Pad1)" "/ModemINDIV/VDD_1V8" "Net-(R6-Pad1)" "Net-(R7-Pad1)" "Net-(R8-Pad1)" /AudioINDIV/ADCOUT
-    /AudioINDIV/DACIN /AudioINDIV/FS /AudioINDIV/BCLK "Net-(U2-Pad9)" "Net-(U2-Pad8)" "Net-(U2-Pad7)" "Net-(U2-Pad6)" "Net-(U2-Pad5)"
-    "Net-(U2-Pad4)" "Net-(U2-Pad3)" "Net-(U2-Pad1)" "Net-(U3-Pad41)" "Net-(U3-Pad38)" "Net-(U3-Pad37)" "Net-(U3-Pad36)" "Net-(U3-Pad35)"
-    "Net-(U3-Pad34)" "Net-(U3-Pad33)" "Net-(U3-Pad40)" "Net-(U3-Pad39)" "Net-(U3-Pad42)" "Net-(U3-Pad31)" "Net-(U3-Pad62)" "Net-(U3-Pad54)"
-    "Net-(U3-Pad53)" "Net-(U3-Pad65)" "Net-(U3-Pad55)" "Net-(U3-Pad49)" "Net-(U3-Pad48)" "Net-(U3-Pad52)" "Net-(U3-Pad51)" "Net-(U3-Pad50)"
-    "Net-(U3-Pad64)" "Net-(U3-Pad63)" "Net-(U3-Pad75)" "Net-(U3-Pad47)" "Net-(U3-Pad66)" "Net-(U3-Pad68)" "Net-(U3-Pad67)" "Net-(U3-Pad1)"
-    "Net-(U3-Pad29)" "Net-(U3-Pad7)" "Net-(U3-Pad8)" "Net-(U3-Pad9)" "Net-(U3-Pad3)" "Net-(U3-Pad4)" "Net-(U3-Pad19)" "Net-(U3-Pad18)"
-    "Net-(U3-Pad26)" "Net-(U3-Pad27)" "Net-(U3-Pad28)" "Net-(U3-Pad45)" "Net-(U3-Pad43)" "Net-(U3-Pad91)" "Net-(U3-Pad87)" "Net-(U3-Pad84)"
-    "Net-(U3-Pad77)" "Net-(U4-Pad6)" "Net-(U4-Pad7)" "Net-(U4-Pad8)" "Net-(U4-Pad9)" "Net-(U4-Pad12)" "Net-(U4-Pad13)" "Net-(U4-Pad14)"
-    "Net-(U4-Pad15)" "/AudioINDIV/oMIC-" /AudioINDIV/oMIC+
+    /ModemINDIV/GPIO6 "/ModemINDIV/RESET_N_1V8" "/ModemINDIV/VDD_3V3_MOFF" /ModemINDIV/VBAT /AudioINDIV/SCLK /AudioINDIV/SDIO /AudioINDIV/BUZZER /AudioINDIV/SPK+
+    "/AudioINDIV/SPK-" "Net-(J10-Pad1)" "Net-(J10-Pad6)" "Net-(J10-Pad2)" "Net-(J10-Pad3)" "Net-(J10-Pad7)" "Net-(KS1-Pad3)" "Net-(KS2-Pad2)"
+    "Net-(KS2-Pad1)" "Net-(Q1-Pad1)" "/ModemINDIV/VDD_1V8" "Net-(R6-Pad1)" "Net-(R7-Pad1)" "Net-(R8-Pad1)" /AudioINDIV/ADCOUT /AudioINDIV/DACIN
+    /AudioINDIV/FS /AudioINDIV/BCLK "Net-(U2-Pad9)" "Net-(U2-Pad8)" "Net-(U2-Pad7)" "Net-(U2-Pad6)" "Net-(U2-Pad5)" "Net-(U2-Pad4)"
+    "Net-(U2-Pad3)" "Net-(U2-Pad1)" "Net-(U3-Pad41)" "Net-(U3-Pad38)" "Net-(U3-Pad37)" "Net-(U3-Pad36)" "Net-(U3-Pad35)" "Net-(U3-Pad34)"
+    "Net-(U3-Pad33)" "Net-(U3-Pad40)" "Net-(U3-Pad39)" "Net-(U3-Pad42)" "Net-(U3-Pad31)" "Net-(U3-Pad62)" "Net-(U3-Pad54)" "Net-(U3-Pad53)"
+    "Net-(U3-Pad65)" "Net-(U3-Pad55)" "Net-(U3-Pad49)" "Net-(U3-Pad48)" "Net-(U3-Pad52)" "Net-(U3-Pad51)" "Net-(U3-Pad50)" "Net-(U3-Pad64)"
+    "Net-(U3-Pad63)" "Net-(U3-Pad75)" "Net-(U3-Pad47)" "Net-(U3-Pad66)" "Net-(U3-Pad68)" "Net-(U3-Pad67)" "Net-(U3-Pad1)" "Net-(U3-Pad29)"
+    "Net-(U3-Pad7)" "Net-(U3-Pad8)" "Net-(U3-Pad9)" "Net-(U3-Pad3)" "Net-(U3-Pad4)" "Net-(U3-Pad19)" "Net-(U3-Pad18)" "Net-(U3-Pad26)"
+    "Net-(U3-Pad27)" "Net-(U3-Pad28)" "Net-(U3-Pad45)" "Net-(U3-Pad43)" "Net-(U3-Pad91)" "Net-(U3-Pad87)" "Net-(U3-Pad84)" "Net-(U3-Pad77)"
+    "Net-(U4-Pad7)" "Net-(U4-Pad8)" "Net-(U4-Pad9)" "Net-(U4-Pad12)" "Net-(U4-Pad13)" "Net-(U4-Pad14)" "/AudioINDIV/oMIC-" /AudioINDIV/oMIC+
+    /AudioINDIV/MCLK /GPIO5 /ModemINDIV/STATUS "Net-(Q2-Pad1)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
