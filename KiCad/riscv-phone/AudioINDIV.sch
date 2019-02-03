@@ -525,8 +525,6 @@ Wire Wire Line
 Wire Wire Line
 	4500 3250 5100 3250
 Wire Wire Line
-	4500 3350 4700 3350
-Wire Wire Line
 	7100 2750 7550 2750
 Wire Wire Line
 	8000 4650 8000 4700
@@ -544,12 +542,6 @@ Wire Wire Line
 	5650 4450 5650 4350
 Wire Wire Line
 	5650 4350 5750 4350
-Wire Wire Line
-	4700 3450 4700 3350
-Wire Wire Line
-	4700 3450 5100 3450
-Wire Wire Line
-	4700 3350 5100 3350
 Connection ~ 5350 5900
 Connection ~ 6150 5650
 Connection ~ 5350 5400
@@ -563,7 +555,6 @@ Connection ~ 4850 2650
 Connection ~ 4600 6250
 Connection ~ 8000 4700
 Connection ~ 4850 2850
-Connection ~ 4700 3350
 NoConn ~ 5850 4450
 $Comp
 L power:GND #PWR?
@@ -768,4 +759,10 @@ Text HLabel 5350 6650 0    50   Input ~ 0
 oMIC+
 Text Notes 1100 2150 0    50   ~ 0
 No C3 or C5 b/c I thought there needed to be 2 sets of C1 and C2
+Wire Wire Line
+	4500 3350 5100 3350
+Text HLabel 4500 3450 0    50   Input ~ 0
+MCLK
+Wire Wire Line
+	4500 3450 5100 3450
 $EndSCHEMATC
