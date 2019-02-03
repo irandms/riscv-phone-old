@@ -168,21 +168,6 @@ F 7 "DigiKey" H 2250 1950 50  0001 C CNN "Vendor"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Logic_LevelTranslator:TXS0108EPW U4
-U 1 1 5C423652
-P 9500 4400
-F 0 "U4" H 9500 3614 50  0000 C CNN
-F 1 "TXS0108EPW" H 9500 3523 50  0000 C CNN
-F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 9500 3650 50  0001 C CNN
-F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 9500 4300 50  0001 C CNN
-F 4 "TXS0108EPWR" H 9500 4400 50  0001 C CNN "Manufacturer Part Number"
-F 5 "Texas Instruments" H 9500 4400 50  0001 C CNN "Manufacturer"
-F 6 "296-23011-1-ND" H 9500 4400 50  0001 C CNN "Vendor Part Number"
-F 7 "DigiKey" H 9500 4400 50  0001 C CNN "Vendor"
-	1    9500 4400
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR022
 U 1 1 5C4255F1
 P 9000 5100
@@ -214,13 +199,13 @@ Text HLabel 1650 2250 0    50   Output ~ 0
 RI
 Text HLabel 1650 2050 0    50   Input ~ 0
 DTR
-Text HLabel 10050 4400 2    50   Input ~ 0
+Text HLabel 10050 4500 2    50   Input ~ 0
 PCM_IN
-Text HLabel 10050 4300 2    50   Output ~ 0
+Text HLabel 10050 4400 2    50   Output ~ 0
 PCM_OUT
-Text HLabel 10050 4100 2    50   BiDi ~ 0
-PCM_CLK
 Text HLabel 10050 4200 2    50   BiDi ~ 0
+PCM_CLK
+Text HLabel 10050 4300 2    50   BiDi ~ 0
 PCM_SYNC
 Text HLabel 1650 2350 0    50   Output ~ 0
 DSR
@@ -281,13 +266,13 @@ Wire Wire Line
 Wire Wire Line
 	9800 3650 9600 3650
 Wire Wire Line
-	10050 4100 9900 4100
-Wire Wire Line
 	10050 4200 9900 4200
 Wire Wire Line
 	10050 4300 9900 4300
 Wire Wire Line
 	10050 4400 9900 4400
+Wire Wire Line
+	10050 4500 9900 4500
 Wire Wire Line
 	1650 1750 1850 1750
 Wire Wire Line
@@ -321,7 +306,6 @@ Wire Wire Line
 Connection ~ 2800 2450
 Connection ~ 2600 5200
 NoConn ~ 2600 4450
-NoConn ~ 9900 4500
 NoConn ~ 9900 4600
 NoConn ~ 9900 4700
 NoConn ~ 9900 4800
@@ -389,7 +373,6 @@ Wire Wire Line
 Wire Wire Line
 	9000 4000 9000 5100
 Connection ~ 9000 5100
-NoConn ~ 9100 4500
 NoConn ~ 9100 4600
 NoConn ~ 9100 4700
 NoConn ~ 9100 4800
@@ -412,8 +395,6 @@ Text HLabel 5550 2850 1    50   BiDi ~ 0
 GPIO4
 Text HLabel 5650 2850 1    50   BiDi ~ 0
 GPIO5
-Text HLabel 5750 2850 1    50   Output ~ 0
-GPIO6
 Wire Wire Line
 	5250 2850 5250 3100
 Wire Wire Line
@@ -541,22 +522,146 @@ Wire Wire Line
 	4350 3100 4350 1650
 Wire Wire Line
 	4350 1650 2650 1650
+Text Label 5750 2850 1    50   ~ 0
+GPIO6
+Text HLabel 10050 4100 2    50   Output ~ 0
+MCLK
 Wire Wire Line
-	8750 4400 8900 4400
+	9900 4100 10050 4100
 Wire Wire Line
-	8900 4400 8900 4100
+	8750 4400 8950 4400
 Wire Wire Line
-	8900 4100 9100 4100
+	8950 4400 8950 4300
 Wire Wire Line
-	8750 4200 9100 4200
+	8950 4300 9100 4300
 Wire Wire Line
-	8750 4300 9100 4300
+	8750 4300 8900 4300
 Wire Wire Line
-	9100 4400 8950 4400
+	8900 4300 8900 4200
 Wire Wire Line
-	8950 4400 8950 4050
+	8900 4200 9100 4200
 Wire Wire Line
-	8950 4050 8750 4050
+	9100 4100 8950 4100
 Wire Wire Line
-	8750 4050 8750 4100
+	8950 4100 8950 3850
+Text Label 8950 3850 2    50   ~ 0
+GPIO6
+Wire Wire Line
+	8850 4100 8850 4500
+Wire Wire Line
+	8850 4500 9100 4500
+Wire Wire Line
+	8750 4100 8850 4100
+Wire Wire Line
+	8750 4200 8800 4200
+Wire Wire Line
+	8800 4200 8800 4450
+Wire Wire Line
+	8800 4450 9050 4450
+Wire Wire Line
+	9050 4450 9050 4400
+Wire Wire Line
+	9050 4400 9100 4400
+$Comp
+L power:GND #PWR?
+U 1 1 5C58C945
+P 9350 2350
+AR Path="/5C50E8FC/5C58C945" Ref="#PWR?"  Part="1" 
+AR Path="/5C508A16/5C58C945" Ref="#PWR?"  Part="1" 
+AR Path="/5C4CDCA3/5C58C945" Ref="#PWR?"  Part="1" 
+AR Path="/5C4CDCB9/5C58C945" Ref="#PWR0103"  Part="1" 
+F 0 "#PWR0103" H 9350 2100 50  0001 C CNN
+F 1 "GND" H 9355 2177 50  0000 C CNN
+F 2 "" H 9350 2350 50  0001 C CNN
+F 3 "" H 9350 2350 50  0001 C CNN
+	1    9350 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C58C956
+P 8800 2050
+AR Path="/5C50E8FC/5C58C956" Ref="R?"  Part="1" 
+AR Path="/5C508A16/5C58C956" Ref="R?"  Part="1" 
+AR Path="/5C4CDCA3/5C58C956" Ref="R?"  Part="1" 
+AR Path="/5C4CDCB9/5C58C956" Ref="R9"  Part="1" 
+F 0 "R9" V 8593 2050 50  0000 C CNN
+F 1 "1k" V 8684 2050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8730 2050 50  0001 C CNN
+F 3 "~" H 8800 2050 50  0001 C CNN
+	1    8800 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:MMBT3904 Q?
+U 1 1 5C58C961
+P 9250 2050
+AR Path="/5C50E8FC/5C58C961" Ref="Q?"  Part="1" 
+AR Path="/5C508A16/5C58C961" Ref="Q?"  Part="1" 
+AR Path="/5C4CDCA3/5C58C961" Ref="Q?"  Part="1" 
+AR Path="/5C4CDCB9/5C58C961" Ref="Q2"  Part="1" 
+F 0 "Q2" H 9441 2096 50  0000 L CNN
+F 1 "MMBT3904" H 9441 2005 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9450 1975 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 9250 2050 50  0001 L CNN
+F 4 "MMBT3904 " H 9441 2196 50  0001 C CNN "Manufacturer Part Number"
+F 5 "ON Semiconductor" H 9441 2196 50  0001 C CNN "Manufacturer"
+F 6 "MMBT3904FSCT-ND " H 9441 2196 50  0001 C CNN "Vendor Part Number"
+F 7 "DigiKey" H 9441 2196 50  0001 C CNN "Vendor"
+	1    9250 2050
+	1    0    0    -1  
+$EndComp
+Text HLabel 9750 1800 2    50   Output ~ 0
+STATUS
+Text Label 9300 1300 2    50   ~ 0
+VDD_3V3
+Wire Wire Line
+	9350 1750 9350 1800
+Wire Wire Line
+	9350 2350 9350 2250
+Wire Wire Line
+	8950 2050 9050 2050
+Wire Wire Line
+	8450 2050 8650 2050
+$Comp
+L Device:R R?
+U 1 1 5C59DE44
+P 9350 1600
+AR Path="/5C50E8FC/5C59DE44" Ref="R?"  Part="1" 
+AR Path="/5C508A16/5C59DE44" Ref="R?"  Part="1" 
+AR Path="/5C4CDCA3/5C59DE44" Ref="R?"  Part="1" 
+AR Path="/5C4CDCB9/5C59DE44" Ref="R11"  Part="1" 
+F 0 "R11" V 9143 1600 50  0000 C CNN
+F 1 "1k" V 9234 1600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9280 1600 50  0001 C CNN
+F 3 "~" H 9350 1600 50  0001 C CNN
+	1    9350 1600
+	-1   0    0    1   
+$EndComp
+Text Label 8450 2050 2    50   ~ 0
+VDD_1V8
+Wire Wire Line
+	9350 1800 9750 1800
+Connection ~ 9350 1800
+Wire Wire Line
+	9350 1800 9350 1850
+Wire Wire Line
+	9300 1300 9350 1300
+Wire Wire Line
+	9350 1300 9350 1450
+$Comp
+L Logic_LevelTranslator:TXS0108EPW U4
+U 1 1 5C423652
+P 9500 4400
+F 0 "U4" H 9500 3614 50  0000 C CNN
+F 1 "TXS0108EPW" H 9500 3523 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 9500 3650 50  0001 C CNN
+F 3 "www.ti.com/lit/ds/symlink/txs0108e.pdf" H 9500 4300 50  0001 C CNN
+F 4 "TXS0108EPWR" H 9500 4400 50  0001 C CNN "Manufacturer Part Number"
+F 5 "Texas Instruments" H 9500 4400 50  0001 C CNN "Manufacturer"
+F 6 "296-23011-1-ND" H 9500 4400 50  0001 C CNN "Vendor Part Number"
+F 7 "DigiKey" H 9500 4400 50  0001 C CNN "Vendor"
+	1    9500 4400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
