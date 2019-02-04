@@ -186,27 +186,27 @@ $EndComp
 $Comp
 L Device:R R7
 U 1 1 5C1B8C5F
-P 950 5600
-F 0 "R7" H 1020 5646 50  0000 L CNN
-F 1 "100k" H 1020 5555 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 880 5600 50  0001 C CNN
-F 3 "~" H 950 5600 50  0001 C CNN
-F 4 "RR0816P-104-D " H 1020 5746 50  0001 C CNN "Manufacturer Part Number"
-F 5 "Susumu" H 1020 5746 50  0001 C CNN "Manufacturer"
-F 6 "RR08P100KDCT-ND " H 1020 5746 50  0001 C CNN "Vendor Part Number"
-F 7 "DigiKey" H 1020 5746 50  0001 C CNN "Vendor"
-	1    950  5600
-	0    -1   -1   0   
+P 2550 4800
+F 0 "R7" H 2620 4846 50  0000 L CNN
+F 1 "100k" H 2620 4755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2480 4800 50  0001 C CNN
+F 3 "~" H 2550 4800 50  0001 C CNN
+F 4 "RR0816P-104-D " H 2620 4946 50  0001 C CNN "Manufacturer Part Number"
+F 5 "Susumu" H 2620 4946 50  0001 C CNN "Manufacturer"
+F 6 "RR08P100KDCT-ND " H 2620 4946 50  0001 C CNN "Vendor Part Number"
+F 7 "DigiKey" H 2620 4946 50  0001 C CNN "Vendor"
+	1    2550 4800
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR0124
 U 1 1 5C1C5E23
-P 700 5400
-F 0 "#PWR0124" H 700 5250 50  0001 C CNN
-F 1 "+3V3" H 715 5573 50  0000 C CNN
-F 2 "" H 700 5400 50  0001 C CNN
-F 3 "" H 700 5400 50  0001 C CNN
-	1    700  5400
+P 2550 4600
+F 0 "#PWR0124" H 2550 4450 50  0001 C CNN
+F 1 "+3V3" H 2565 4773 50  0000 C CNN
+F 2 "" H 2550 4600 50  0001 C CNN
+F 3 "" H 2550 4600 50  0001 C CNN
+	1    2550 4600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -833,8 +833,6 @@ Text Notes 4500 850  0    50   ~ 0
 TODO: Change 3V3 rails to 3V3_MOFF (mostly off)
 Text Notes 2950 6100 0    50   ~ 0
 Wakeup from Keypad/Modem Interrupt
-Text Label 2350 5000 0    50   ~ 0
-RESET
 Text HLabel 2700 5000 2    50   BiDi ~ 0
 RESET
 Text Notes 3150 4150 2    50   ~ 0
@@ -847,9 +845,9 @@ Text Label 5500 5550 0    50   ~ 0
 PLL_AVSS
 Text Notes 3500 1650 0    50   ~ 0
 Place 3 near VDD, one near AON_IVDD
-Text HLabel 6400 3350 2    50   Input ~ 0
+Text HLabel 6400 3450 2    50   Input ~ 0
 RI
-Text HLabel 6400 3450 2    50   Output ~ 0
+Text HLabel 6400 4250 2    50   Output ~ 0
 DTR
 Text HLabel 6400 3550 2    50   Output ~ 0
 LCD_CS
@@ -857,7 +855,7 @@ Text HLabel 6400 3650 2    50   Output ~ 0
 MOSI
 Text HLabel 6400 3850 2    50   Output ~ 0
 SCK
-Text HLabel 6400 4250 2    50   Input ~ 0
+Text HLabel 6400 3350 2    50   Input ~ 0
 KEYPAD_INT
 Text HLabel 10550 3500 2    50   Input ~ 0
 DEBUG_TX
@@ -947,7 +945,7 @@ Text Label 9550 3400 2    50   ~ 0
 UART0_RX
 Text HLabel 2650 6950 2    50   Input ~ 0
 KEYPAD_INT
-Text HLabel 6400 4150 2    50   Input ~ 0
+Text HLabel 10300 1600 2    50   Input ~ 0
 MODEM_STATUS
 Text HLabel 1900 4550 2    50   Output ~ 0
 RESET_N_1V8
@@ -1298,10 +1296,6 @@ Wire Wire Line
 Wire Wire Line
 	1100 4750 1100 4850
 Wire Wire Line
-	700  5400 700  5600
-Wire Wire Line
-	700  5600 800  5600
-Wire Wire Line
 	1100 4550 1100 4750
 Wire Wire Line
 	1650 5000 1950 5000
@@ -1310,7 +1304,7 @@ Wire Notes Line
 Wire Notes Line
 	3200 4050 3200 5900
 Wire Wire Line
-	6300 4150 6400 4150
+	10200 1600 10300 1600
 Wire Wire Line
 	3900 5550 5200 5550
 Wire Wire Line
@@ -1321,8 +1315,6 @@ Wire Wire Line
 	2050 1400 1900 1400
 Wire Wire Line
 	1450 4550 1900 4550
-Wire Wire Line
-	1100 5600 1150 5600
 Wire Wire Line
 	850  5200 850  4850
 Wire Wire Line
@@ -1407,7 +1399,6 @@ Connection ~ 1100 4750
 Connection ~ 1100 4550
 Connection ~ 1900 1000
 Connection ~ 1450 4550
-Connection ~ 1150 5600
 Connection ~ 8650 3150
 Connection ~ 1600 7000
 NoConn ~ 9150 4750
@@ -1419,6 +1410,23 @@ NoConn ~ 10200 4550
 NoConn ~ 1450 5200
 NoConn ~ 1900 6750
 NoConn ~ -6450 -750
+$Comp
+L riscv-phone:SC18IS600 U?
+U 1 1 5C4F74D5
+P 9550 2200
+AR Path="/5C50F5D1/5C4F74D5" Ref="U?"  Part="1" 
+AR Path="/5C1083B4/5C4F74D5" Ref="U12"  Part="1" 
+F 0 "U12" H 9550 3225 50  0000 C CNN
+F 1 "SC18IS600" H 9550 3134 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 9600 2200 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74CBTLV3257.pdf" H 9600 2200 50  0001 C CNN
+F 4 "SC18IS600IPW/S8HP " H 9550 3325 50  0001 C CNN "Manufacturer Part Number"
+F 5 "NXP USA Inc." H 9550 3325 50  0001 C CNN "Manufacturer"
+F 6 "568-13690-1-ND" H 9550 3325 50  0001 C CNN "Vendor Part Number"
+F 7 "DigiKey" H 9550 3325 50  0001 C CNN "Vendor"
+	1    9550 2200
+	1    0    0    -1  
+$EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5C4F74DC
@@ -1510,6 +1518,8 @@ Wire Wire Line
 Wire Wire Line
 	8900 1400 8750 1400
 Wire Wire Line
+	8750 2000 8900 2000
+Wire Wire Line
 	10200 2000 10350 2000
 Wire Wire Line
 	8900 2150 8900 2100
@@ -1546,14 +1556,10 @@ Connection ~ 7950 1900
 NoConn ~ 10200 1800
 NoConn ~ 10200 1900
 NoConn ~ 10200 2100
-NoConn ~ 10200 1600
-NoConn ~ 10200 1700
 Text Label 8750 1800 2    50   ~ 0
 BRIDGE_CS
 Text Label 7800 1900 2    50   ~ 0
 BRIDGE_INT
-Text Label 6400 3950 0    50   ~ 0
-BRIDGE_CS
 Text Label 6400 5050 0    50   ~ 0
 BRIDGE_INT
 Text Label 6400 5150 0    50   ~ 0
@@ -1638,7 +1644,7 @@ Text Label 9000 5650 0    50   ~ 0
 SCK
 Text Label 7950 5850 2    50   ~ 0
 EEPROM_CS
-Text Label 6400 4050 0    50   ~ 0
+Text Label 6400 3950 0    50   ~ 0
 EEPROM_CS
 Wire Wire Line
 	7400 5450 8050 5450
@@ -1694,25 +1700,46 @@ Wire Wire Line
 	7400 5500 7400 5450
 Wire Wire Line
 	7400 5800 7400 6050
-Text HLabel 6400 3750 2    50   Output ~ 0
+Wire Wire Line
+	2550 4650 2550 4600
+Wire Wire Line
+	2550 4950 2550 5000
+Text HLabel 6400 4150 2    50   Output ~ 0
+LCD_RST
+Wire Wire Line
+	6300 4150 6400 4150
+Text HLabel 10300 1700 2    50   Output ~ 0
+MODEM_RST
+Wire Wire Line
+	10300 1700 10200 1700
+Text Label 6400 4050 0    50   ~ 0
+BRIDGE_CS
+Text HLabel 6400 3750 2    50   Input ~ 0
 MISO
 $Comp
-L riscv-phone:SC18IS600 U?
-U 1 1 5C4F74D5
-P 9550 2200
-AR Path="/5C50F5D1/5C4F74D5" Ref="U?"  Part="1" 
-AR Path="/5C1083B4/5C4F74D5" Ref="U12"  Part="1" 
-F 0 "U12" H 9550 3225 50  0000 C CNN
-F 1 "SC18IS600" H 9550 3134 50  0000 C CNN
-F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 9600 2200 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74CBTLV3257.pdf" H 9600 2200 50  0001 C CNN
-F 4 "SC18IS600IPW/S8HP " H 9550 3325 50  0001 C CNN "Manufacturer Part Number"
-F 5 "NXP USA Inc." H 9550 3325 50  0001 C CNN "Manufacturer"
-F 6 "568-13690-1-ND" H 9550 3325 50  0001 C CNN "Vendor Part Number"
-F 7 "DigiKey" H 9550 3325 50  0001 C CNN "Vendor"
-	1    9550 2200
+L Device:C C60
+U 1 1 5CC27C1D
+P 7250 1400
+F 0 "C60" H 7365 1446 50  0000 L CNN
+F 1 "0.1uF" H 7365 1355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7288 1250 50  0001 C CNN
+F 3 "~" H 7250 1400 50  0001 C CNN
+F 4 "CL10B104KO8NNNC " H 7365 1546 50  0001 C CNN "Manufacturer Part Number"
+F 5 "Samsung Electro-Mechanics" H 7365 1546 50  0001 C CNN "Manufacturer"
+F 6 "1276-1005-1-ND " H 7365 1546 50  0001 C CNN "Vendor Part Number"
+F 7 "DigiKey" H 7365 1546 50  0001 C CNN "Vendor"
+	1    7250 1400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8900 2000 8750 2000
+	8750 1400 8750 1200
+Wire Wire Line
+	8750 1200 7250 1200
+Wire Wire Line
+	7250 1200 7250 1250
+Wire Wire Line
+	7250 1550 7250 2100
+Wire Wire Line
+	7250 2100 8900 2100
+Connection ~ 8900 2100
 $EndSCHEMATC
