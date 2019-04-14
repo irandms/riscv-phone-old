@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:riscv-phone-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -856,8 +856,6 @@ Wire Wire Line
 Wire Wire Line
 	3100 1500 3950 1500
 Wire Wire Line
-	3950 1500 3950 1800
-Wire Wire Line
 	4050 1800 4050 900 
 Wire Wire Line
 	4050 900  3100 900 
@@ -984,4 +982,6 @@ NoConn ~ 5650 4200
 NoConn ~ 5650 4300
 NoConn ~ 5650 4400
 NoConn ~ 5650 4500
+Wire Wire Line
+	3950 1800 3950 1500
 $EndSCHEMATC

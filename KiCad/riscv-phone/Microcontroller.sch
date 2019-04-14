@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:riscv-phone-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -681,7 +681,7 @@ L Device:R R11
 U 1 1 5C13AA95
 P 1900 1250
 F 0 "R11" H 1970 1296 50  0000 L CNN
-F 1 "4.7k" H 1970 1205 50  0000 L CNN
+F 1 "330" H 1970 1205 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 1830 1250 50  0001 C CNN
 F 3 "~" H 1900 1250 50  0001 C CNN
 F 4 "RC0603JR-074K7L " H 1970 1396 50  0001 C CNN "Manufacturer Part Number"
@@ -1742,4 +1742,21 @@ Wire Wire Line
 Wire Wire Line
 	7250 2100 8900 2100
 Connection ~ 8900 2100
+Wire Wire Line
+	2200 6900 2200 6750
+Wire Wire Line
+	2200 7100 2200 7250
+$Comp
+L power:GND #PWR?
+U 1 1 5CB1A43D
+P 2200 7250
+F 0 "#PWR?" H 2200 7000 50  0001 C CNN
+F 1 "GND" H 2205 7077 50  0000 C CNN
+F 2 "" H 2200 7250 50  0001 C CNN
+F 3 "" H 2200 7250 50  0001 C CNN
+	1    2200 7250
+	1    0    0    -1  
+$EndComp
+Text Label 2200 6750 0    50   ~ 0
+VDD_3V3
 $EndSCHEMATC
