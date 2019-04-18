@@ -1,5 +1,11 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP MCP23S08_SS
+D 8-bit I/O expander, SPI, interrupts, SSOP-20
+K SPI parallel port expander
+F http://ww1.microchip.com/downloads/en/DeviceDoc/MCP23008-MCP23S08-Data-Sheet-20001919F.pdf
+$ENDCMP
+#
 $CMP Q_DUAL_NMOS_S1G1D2S2G2D1
 D Dual NMOS transistor, 6 pin package
 K transistor NMOS N-MOS N-MOSFET
